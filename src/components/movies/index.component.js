@@ -26,16 +26,40 @@ export default class Index extends Component {
         })
         .catch(function (error) {
           console.log(error);
-        })
+        });
     }
     
     render() {
       console.log('cheki index wewe lodash', _.size(this.state.movies.entries))
       d3.selectAll('.home > *').remove();
+      d3.selectAll('.head > *').remove();
 
-        if(_.size(this.state.movies) > 0) {
-            return this.state.movies.entries.map(el => (
-                // _.forEach(this.state.movies.entries, function(x){
+      d3.selectAll('.head')
+          .append('h2')
+          .style('padding-left', '3%')
+          .text('Popular Movies')
+
+
+        if(_.size(this.state.movies.entries) > 0) {
+
+            let movies = _.filter(this.state.movies.entries, { 'programType' : 'movie'}),
+            newArray = [];
+
+            movies.forEach(function(x){
+                if(x.releaseYear >= 2010)
+                {
+                    newArray.push(x);
+                }
+            });
+            console.log(newArray);
+
+
+            let reduceArray = _.slice(newArray, 0, 21),
+                 field = 'title',
+            finalArray = reduceArray.sort();
+            reduceArray.sort((a, b) => (a[field] || "").toString().localeCompare((b[field] || "").toString()));
+
+            return finalArray.map(el => (
 
                     <div className="row" style={{paddingRight: "4%", paddingLeft: "8%"}}>
                         <div style={{paddingTop: "5%", paddingRight: "4%", display: "inline-block"}}>
@@ -49,7 +73,7 @@ export default class Index extends Component {
                                 <Card.Body>
                                     <Card.Title>
                                         <center style={{color: "gray"}}>
-                                            {el.title}
+                                            {el.title} | {el.releaseYear}
                                         </center>
                                     </Card.Title>
 
@@ -57,7 +81,6 @@ export default class Index extends Component {
                             </Card>
                         </div>
                     </div>
-                // })
 
             ));
         }else {

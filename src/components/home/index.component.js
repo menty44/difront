@@ -39,7 +39,7 @@ import Series from '../../components/series/index.component'
           <Router>
             <div className="row" style={{paddingBottom:"15%"}}>
                 <div className="col-md-12">
-                    <div style={{background: "#2f3236", color: "white", paddingTop: "2%", paddingBottom: "2%"}}>
+                    <div className="head" style={{background: "#2f3236", color: "white", paddingTop: "2%", paddingBottom: "2%"}}>
                         <h2 style={{paddingLeft:"3%"}}>Popular Titles</h2>
                     </div>
                     <div className="col-md-2"></div>
