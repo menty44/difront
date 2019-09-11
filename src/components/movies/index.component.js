@@ -21,14 +21,11 @@ export default class Index extends Component {
     componentDidMount(){
       axios.get('https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json')
         .then(response => {
-          console.log(response.data);
           this.setState({ movies: response.data });
         })
         .catch(function (error) {
-          console.log(error);
         });
     }
-    
     render() {
       console.log('cheki index wewe lodash', _.size(this.state.movies.entries))
       d3.selectAll('.home > *').remove();

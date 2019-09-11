@@ -16,24 +16,14 @@ export default class FooterIndex extends Component {
 
   constructor(props) {
       super(props);
-      this.state = {business: []};
     }
     componentDidMount(){
-      axios.get('http://localhost:4000/business')
-        .then(response => {
-          console.log(response.data);
-          this.setState({ business: response.data });
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-    };
+    }
 
     render(){
         return (
           <div style={{background: "black", color: "white", paddingTop: "3%", paddingBottom: "3%"}}>
             <div style={{display: "inline", paddingRight: "10%", paddingLeft: "10%", textAlign: "justified"}}>
-              
               <div style={{display: "inline-block", paddingRight: "1%", paddingLeft: "1%"}}>Home</div>
               <div style={{display: "inline-block", paddingRight: "1%", paddingLeft: "1%"}}>|</div>
               <div style={{display: "inline-block", paddingRight: "1%", paddingLeft: "1%"}}>Terms and Conditions</div>
@@ -49,7 +39,6 @@ export default class FooterIndex extends Component {
 
               <div style={{display: "inline-block", paddingRight: "1%", paddingLeft: "1%"}}>|</div>
               <div style={{display: "inline-block", paddingRight: "1%", paddingLeft: "1%"}}>Manage Account</div>
-             
   
             </div>
             <p></p>

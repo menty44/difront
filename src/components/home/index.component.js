@@ -13,9 +13,6 @@ import Series from '../../components/series/index.component';
 import Header from '../../components/header/index.component';
 
 
-// import FooterIndex from '../../components/footer/index.component';
-
-
  class Index extends Component {
 
   constructor(props) {
@@ -23,19 +20,9 @@ import Header from '../../components/header/index.component';
       this.state = {business: []};
     }
     componentDidMount(){
-      axios.get('http://localhost:4000/business')
-        .then(response => {
-          console.log(response.data);
-          this.setState({ business: response.data });
-        })
-        .catch(function (error) {
-          console.log(error);
-        })
     }
 
     render() {
-      console.log('cheki index wewe', this.state.business.length)
-      console.log('cheki index wewe lodash', _.size(this.state.business))
         return (
           <Router>
             <div className="row" style={{paddingBottom:"15%"}}>
