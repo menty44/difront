@@ -1,27 +1,16 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import TableRow from './TableRow';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import Loader from 'react-loader-spinner';
 import _ from 'lodash';
 
-// import Create from './gender/create.component';
-// import GenderCreate from '..../components/gender/create.component';
-
-export default class Genderindex extends Component {
+export default class Index extends Component {
 
   constructor(props) {
       super(props);
       this.state = {business: []};
-      this.routeChange = this.routeChange.bind(this);
     }
-
-    routeChange() {
-      let path = '/gender/create';
-      this.props.history.push(path);
-    }
-
     componentDidMount(){
       axios.get('http://localhost:4000/business')
         .then(response => {
@@ -44,14 +33,13 @@ export default class Genderindex extends Component {
       if(_.size(this.state.business) > 0){
         return (
           <div>
-            <button onClick={this.routeChange} type="submit" style={{width: '100%'}} className="btn btn-primary">Create New Gender</button>
-            
-            <h3 align="center">Gender List</h3>
+            <h3 align="center">Business List</h3>
             <table className="table table-striped" style={{ marginTop: 20 }}>
               <thead>
                 <tr>
-                  <th>Gender Name</th>
+                  <th>Person</th>
                   <th>Business</th>
+                  <th>GST Number</th>
                   <th colSpan="2">Action</th>
                 </tr>
               </thead>

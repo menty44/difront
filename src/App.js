@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import pic from './assets/2.jpg';
 import './App.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,12 +8,14 @@ import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import  Index  from './components/home/index.component'
+
 
 class App extends Component {
   render() {
     return (
-      <Router>
         <div className="">
+      <Router>
             <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
                 <Navbar.Brand href="#home">DEMO Streaming</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -27,8 +30,13 @@ class App extends Component {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-        </div>
       </Router>
+            <Index/>
+        </div>
+
+
+
+
     );
   }
 }
