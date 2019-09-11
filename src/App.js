@@ -20,7 +20,7 @@ class App extends Component {
         <div className="">
       <Router >
             <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
-                <Navbar.Brand path = "/" component = {App}>DEMO Streaming</Navbar.Brand>
+                <Navbar.Brand href="/">DEMO Streaming</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
