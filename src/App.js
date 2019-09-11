@@ -8,7 +8,8 @@ import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import  Index  from './components/home/index.component'
+import  Index  from './components/home/index.component';
+import Footer from './components/footer/index.component'
 
 
 class App extends Component {
@@ -17,7 +18,7 @@ class App extends Component {
         <div className="">
       <Router>
             <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
-                <Navbar.Brand href="#home">DEMO Streaming</Navbar.Brand>
+                <Navbar.Brand href="/">DEMO Streaming</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
@@ -32,6 +33,7 @@ class App extends Component {
             </Navbar>
       </Router>
             <Index/>
+            <Footer/>
         </div>
 
 

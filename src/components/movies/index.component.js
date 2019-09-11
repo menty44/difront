@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import TableRow from './TableRow';
+// import TableRow from './TableRow';
 
 import Loader from 'react-loader-spinner';
 import _ from 'lodash';
+import * as d3 from "d3";
 
 export default class Index extends Component {
 
@@ -21,35 +22,12 @@ export default class Index extends Component {
           console.log(error);
         })
     }
-    tabRow(){
-      return this.state.business.map(function(object, i){
-          return <TableRow obj={object} key={i} />;
-      });
-    }
-
+    
     render() {
       console.log('cheki index wewe', this.state.business.length)
       console.log('cheki index wewe lodash', _.size(this.state.business))
-      if(_.size(this.state.business) > 0){
-        return (
-          <div>
-            <h3 align="center">Business List</h3>
-            <table className="table table-striped" style={{ marginTop: 20 }}>
-              <thead>
-                <tr>
-                  <th>Person</th>
-                  <th>Business</th>
-                  <th>GST Number</th>
-                  <th colSpan="2">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                { this.tabRow() }
-              </tbody>
-            </table>
-          </div>
-        );
-      }else{
+      d3.selectAll('.home > *').remove();
+      
         return (
           <div className="row">
               <div className="col-md-5"></div>
@@ -66,7 +44,7 @@ export default class Index extends Component {
           </div>
          
           );
-      }
+      
       
     }
     

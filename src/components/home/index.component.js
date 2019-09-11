@@ -5,7 +5,14 @@ import axios from 'axios';
 import Loader from 'react-loader-spinner';
 import img from '../../assets/2.jpg';
 import _ from 'lodash';
+import * as d3 from "d3";
 import { Card } from 'react-bootstrap';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Movies from '../../components/movies/index.component';
+import Series from '../../components/series/index.component'
+
+
+// import FooterIndex from '../../components/footer/index.component';
 
 
  class Index extends Component {
@@ -29,16 +36,18 @@ import { Card } from 'react-bootstrap';
       console.log('cheki index wewe', this.state.business.length)
       console.log('cheki index wewe lodash', _.size(this.state.business))
         return (
-            <div className="row">
+          <Router>
+            <div className="row" style={{paddingBottom:"15%"}}>
                 <div className="col-md-12">
                     <div style={{background: "#2f3236", color: "white", paddingTop: "2%", paddingBottom: "2%"}}>
                         <h2 style={{paddingLeft:"3%"}}>Popular Titles</h2>
                     </div>
                     <div className="col-md-2"></div>
-                    <div className="col-md-8" style={{display: "block"}}>
+                    <div className="col-md-8 home" style={{display: "block"}}>
                         <div style={{paddingTop: "5%", paddingRight: "4%", display: "inline-block"}}>
 
-                        <Card style={{ width: '18rem' }}>
+                        <Link to={'/series'}>
+                          <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={img} />
                             <div className="centered" style={{position: "absolute",
                                 top: "30%",
@@ -50,9 +59,11 @@ import { Card } from 'react-bootstrap';
 
                             </Card.Body>
                         </Card>
+                        </Link>
                         </div>
 
                         <div style={{paddingTop: "5%", display: "inline-block"}}>
+                        <Link to={'/movies'}>
                             <Card style={{ width: '18rem', color: "gray"}}>
                                 <Card.Img variant="top" src={img} />
                                 <div className="centered" style={{position: "absolute",
@@ -65,55 +76,20 @@ import { Card } from 'react-bootstrap';
 
                                 </Card.Body>
                             </Card>
+                            </Link>
                         </div>
                     </div>
                     <div className="col-md-2"></div>
                 </div>
+                <Switch>
+                  <Route path='/movies' component={ Movies } />
+                  <Route path='/series' component={ Series } />
+                </Switch>
             </div>
+            
+            </Router>
+
         );
-      // if(_.size(this.state.business) > 0){
-      //   return (
-      //     <div>
-      //       <h3 align="center">Business List</h3>
-      //       <table className="table table-striped" style={{ marginTop: 20 }}>
-      //         <thead>
-      //           <tr>
-      //             <th>Person</th>
-      //             <th>Business</th>
-      //             <th>GST Number</th>
-      //             <th colSpan="2">Action</th>
-      //           </tr>
-      //         </thead>
-      //         <tbody>
-      //           { this.tabRow() }
-      //         </tbody>
-      //       </table>
-      //     </div>
-      //   );
-      // }else{
-      //   return (
-      //     <div className="row">
-      //         <div className="col-md-12">
-      //             <div style={{background: "#2f3236", color: "white", paddingTop: "2%", paddingBottom: "2%"}}>
-      //                 <h2 style={{paddingLeft:"3%"}}>Popular Titles</h2>
-      //             </div>
-      //         </div>
-      //         <div className="col-md-5"></div>
-      //         <div className="col-md-2" style={{ paddingTop: "5%"}}>
-      //         <span style={{float: 'centre'}}>
-      //           <Loader
-      //             type="Oval"
-      //             color="#00BFFF"
-      //             height="100"
-      //             width="100"
-      //           />
-      //           </span></div>
-      //         <div className="col-md-5"></div>
-      //     </div>
-      //
-      //     );
-      // }
-      
     }
     
   }
