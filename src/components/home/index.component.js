@@ -9,7 +9,8 @@ import * as d3 from "d3";
 import { Card } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Movies from '../../components/movies/index.component';
-import Series from '../../components/series/index.component'
+import Series from '../../components/series/index.component';
+import Header from '../../components/header/index.component';
 
 
 // import FooterIndex from '../../components/footer/index.component';
@@ -39,9 +40,7 @@ import Series from '../../components/series/index.component'
           <Router>
             <div className="row" style={{paddingBottom:"15%"}}>
                 <div className="col-md-12">
-                    <div className="head" style={{background: "#2f3236", color: "white", paddingTop: "2%", paddingBottom: "2%"}}>
-                        <h2 style={{paddingLeft:"3%"}}>Popular Titles</h2>
-                    </div>
+                    <Header/>
                     <div className="col-md-2"></div>
                     <div className="col-md-8 home" style={{display: "block"}}>
                         <div style={{paddingTop: "5%", paddingRight: "4%", display: "inline-block"}}>
