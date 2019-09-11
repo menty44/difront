@@ -7,18 +7,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link, IndexRoute } from 'react-router-dom';
 import  Index  from './components/home/index.component';
-import Footer from './components/footer/index.component'
+import Footer from './components/footer/index.component';
+// import History from 'react-history/BrowserHistory';
+// import { Push } from 'react-history/Actions'
 
 
 class App extends Component {
   render() {
     return (
         <div className="">
-      <Router>
+      <Router >
             <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
-                <Navbar.Brand href="/">DEMO Streaming</Navbar.Brand>
+                <Navbar.Brand path = "/" component = {App}>DEMO Streaming</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
@@ -32,6 +34,7 @@ class App extends Component {
                 </Navbar.Collapse>
             </Navbar>
       </Router>
+
             <Index/>
             <Footer/>
         </div>

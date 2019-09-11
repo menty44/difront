@@ -5,18 +5,24 @@ import axios from 'axios';
 import Loader from 'react-loader-spinner';
 import _ from 'lodash';
 import * as d3 from "d3";
+import {Card} from "react-bootstrap";
+import img from "../../assets/2.jpg";
 
 export default class Index extends Component {
 
   constructor(props) {
       super(props);
-      this.state = {business: []};
+      this.state = {
+          movies: [],
+          loading: "Loading ...",
+          error: "Oops, something went wrong ..."
+      };
     }
     componentDidMount(){
-      axios.get('http://localhost:4000/business')
+      axios.get('https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json')
         .then(response => {
           console.log(response.data);
-          this.setState({ business: response.data });
+          this.setState({ movies: response.data });
         })
         .catch(function (error) {
           console.log(error);
@@ -24,26 +30,43 @@ export default class Index extends Component {
     }
     
     render() {
-      console.log('cheki index wewe', this.state.business.length)
-      console.log('cheki index wewe lodash', _.size(this.state.business))
+      console.log('cheki index wewe lodash', _.size(this.state.movies.entries))
       d3.selectAll('.home > *').remove();
-      
-        return (
-          <div className="row">
-              <div className="col-md-5"></div>
-              <div className="col-md-2">
-              <span style={{float: 'centre'}}>
-                <Loader 
-                  type="Oval"
-                  color="#00BFFF"
-                  height="100"	
-                  width="100"
-                />
-                </span></div>
-              <div className="col-md-5"></div>
-          </div>
-         
-          );
+
+        if(_.size(this.state.movies) > 0) {
+            return this.state.movies.entries.map(el => (
+                // _.forEach(this.state.movies.entries, function(x){
+
+                    <div className="row" style={{paddingRight: "4%", paddingLeft: "8%"}}>
+                        <div style={{paddingTop: "5%", paddingRight: "4%", display: "inline-block"}}>
+                            <Card style={{ width: '18rem'}}>
+                                <Card.Img variant="top" src={el.images["Poster Art"].url} />
+                                <div className="centered" style={{position: "absolute",
+                                    top: "30%",
+                                    left: "50%",
+                                    color: "white",
+                                    transform: "translate(-50%, -50%)"}}><h1>{el.programType}</h1></div>
+                                <Card.Body>
+                                    <Card.Title>
+                                        <center style={{color: "gray"}}>
+                                            {el.title}
+                                        </center>
+                                    </Card.Title>
+
+                                </Card.Body>
+                            </Card>
+                        </div>
+                    </div>
+                // })
+
+            ));
+        }else {
+            return (
+                    <div className="col-md-12" style={{textAlign: "center", paddingTop: "10%", color: "gray"}}>
+                        <h2>{this.state.loading}</h2>
+                    </div>
+            );
+        }
       
       
     }
