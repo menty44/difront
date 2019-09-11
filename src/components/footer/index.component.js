@@ -8,6 +8,10 @@ import fb_blue from '../../assets/fb-white.svg';
 import tw_blue from '../../assets/twit_white.svg';
 import in_blue from '../../assets/inst_white.svg';
 
+import apple from '../../assets/apple.svg';
+import droid from '../../assets/droid.svg';
+import win from '../../assets/windows.svg';
+
 export default class FooterIndex extends Component {
 
   constructor(props) {
@@ -57,10 +61,13 @@ export default class FooterIndex extends Component {
               <img src={tw_blue} style={{height: "30px", paddingRight: "1%", paddingLeft: "1%"}}></img>
               <img src={in_blue } style={{height: "30px", paddingRight: "1%", paddingLeft: "1%"}}></img>
 
+              <img src={apple} style={{height: "30px", paddingRight: "1%", paddingLeft: "1%", float: "right"}}></img>
+              <img src={droid} style={{height: "30px", paddingRight: "1%", paddingLeft: "1%", float: "right"}}></img>
+              <img src={win} style={{height: "30px", paddingRight: "1%", paddingLeft: "1%", float: "right"}}></img>
+
+
               </div>
-              <div>
-              <img src={""}></img>
-              <img src={""}></img>
+              <div style={{}}>
               </div>
 
           </div>

@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fe6f879-5f15-498d-b7eb-829440bcbf37" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fb-blue.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fb-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/inst_blue.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/inst_white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/twit_blue.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/twit_white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/footer/index.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/apple.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/droid.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/windows.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/index.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/index.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/movies/index.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movies/index.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/series/index.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/series/index.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/index.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/index.component.js" afterDir="false" />
     </list>
     <ignored path="reactdemo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,8 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/footer/index.component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="53" column="62" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
+            <state relative-caret-position="258">
+              <caret line="63" column="108" selection-start-line="63" selection-start-column="108" selection-end-line="63" selection-end-column="108" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#108#150#0" expanded="true" />
@@ -326,12 +313,12 @@
       <workItem from="1550778509478" duration="258000" />
       <workItem from="1551498525166" duration="1421000" />
       <workItem from="1568136066571" duration="13256000" />
-      <workItem from="1568195769118" duration="1311000" />
+      <workItem from="1568195769118" duration="2032000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16246000" />
+    <option name="totallyTimeSpent" value="16967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -475,8 +462,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/footer/index.component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="53" column="62" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
+        <state relative-caret-position="258">
+          <caret line="63" column="108" selection-start-line="63" selection-start-column="108" selection-end-line="63" selection-end-column="108" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#108#150#0" expanded="true" />
